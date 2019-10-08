@@ -39,6 +39,13 @@ class CountdownViewController: UIViewController {
         return formatter
     }()
     
+    private var dateComponentsFormatter: DateComponentsFormatter = {
+        let formatter = DateComponentsFormatter()
+        formatter.unitsStyle = .positional
+        formatter.allowedUnits = [.hour, .minute, .second]
+        return formatter
+    }()
+    
     private var duration: TimeInterval {
         let minuteString = countdownPicker.selectedRow(inComponent: 0)
         let secondString = countdownPicker.selectedRow(inComponent: 2)
@@ -119,8 +126,9 @@ class CountdownViewController: UIViewController {
     
     
     private func string(from duration: TimeInterval) -> String {
-        let date = Date(timeIntervalSinceReferenceDate: duration)
-        return dateFormatter.string(from: date)
+//        let date = Date(timeIntervalSinceReferenceDate: duration)
+//        return dateFormatter.string(from: date)
+        return DateComponentsFormatter.string(from: duration)!
     }
 }
 
