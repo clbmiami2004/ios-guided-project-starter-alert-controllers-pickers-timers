@@ -39,6 +39,7 @@ class CountdownViewController: UIViewController {
         
         countDown.delegate = self
         countDown.duration = 5
+        updateViews()
     }
         
     
@@ -71,6 +72,18 @@ class CountdownViewController: UIViewController {
         
     private func updateViews() {
         timeLabel.text = String(countDown.timeRemaining)
+        
+        startButton.isEnabled = true
+        
+        switch countDown.state {
+        case .started:
+            timeLabel.text = String(countDown.timeRemaining)
+            startButton.isEnabled = false
+        case .finished:
+            timeLabel.text = String(0) // "0"
+        case .reset:
+            timeLabel.text = String(countDown.duration)
+        }
     }
     
     
@@ -82,7 +95,7 @@ class CountdownViewController: UIViewController {
 
 extension CountdownViewController: CountdownDelegate {
     func countdownDidUpdate(timeRemaining: TimeInterval) {
-        
+        updateViews()
     }
     
     func countdownDidFinish() {

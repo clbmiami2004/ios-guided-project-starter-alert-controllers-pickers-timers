@@ -40,7 +40,7 @@
                                             <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="I70-Zt-BDD"/>
+                                            <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TYV-sa-uKE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hx6-Ln-pO4">
@@ -54,7 +54,7 @@
                                             <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eXZ-RK-eno"/>
+                                            <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mpd-kO-kAc"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -71,7 +71,7 @@
                     <connections>
                         <outlet property="countdownPicker" destination="K06-gt-8Yf" id="dmy-jr-S3V"/>
                         <outlet property="resetButton" destination="Hx6-Ln-pO4" id="Yht-dK-swW"/>
-                        <outlet property="startButton" destination="jX1-It-EYk" id="7CU-uO-6lT"/>
+                        <outlet property="startButton" destination="jX1-It-EYk" id="xPH-cy-wN7"/>
                         <outlet property="timeLabel" destination="4Dc-65-N5c" id="QMR-V5-Are"/>
                     </connections>
                 </viewController>
